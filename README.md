@@ -1,1 +1,3 @@
-# Projet d'une web application de location de voitures avec Next JS, TypeScript, Tailwind 
+# Web app - location de voitures
+
+## Tech Stack : Next JS, TypeScript, Tailwind
