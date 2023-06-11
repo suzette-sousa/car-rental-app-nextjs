@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Button from "./Button";
+import Image from 'next/image';
+import Button from './Button';
 
 const Mea = () => {
   const handleScroll = () => {};
@@ -15,14 +15,20 @@ const Mea = () => {
           La location de voitures sans efforts, avec toute simplicité.
         </p>
         <Button
-          title={"Découvre les voitures"}
+          title={'Découvre les voitures'}
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
       </div>
       <div className="mea__image-container">
         <div className="mea__image">
-          <Image src="/mea.png" alt="mea" fill className="object-contain" />
+          <Image
+            src="/mea.png"
+            alt="mea"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+            className="object-contain"
+          />
         </div>
         <div className="mea__image-overlay" />
       </div>
