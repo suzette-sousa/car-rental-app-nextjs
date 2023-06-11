@@ -27,9 +27,9 @@ const CarCard = ({ car }: CarCardProps) => {
       </div>
 
       <p className="flex mt-6 text-[32px] font-extrabold">
-        <span className="self-start text-[14px] font-semibold">$</span>
+        <span className="self-start text-[14px] font-semibold">€</span>
         {carRent}
-        <span className="self-end text-[14px] font-medium">/day</span>
+        <span className="self-end text-[14px] font-medium">/jour</span>
       </p>
 
       <div className="relative w-full h-40 my-3 object-contain">
@@ -53,7 +53,7 @@ const CarCard = ({ car }: CarCardProps) => {
               alt="steering wheel"
             />
             <p className="text-[14px]">
-              {transmission === 'a' ? 'Automatic' : 'Manual'}
+              {transmission === 'a' ? 'Automatique' : 'Manuelle'}
             </p>
           </div>
 
