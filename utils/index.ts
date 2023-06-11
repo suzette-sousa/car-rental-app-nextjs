@@ -1,3 +1,19 @@
+const fetchCars = async () => {
+  const headers = {
+    'X-RapidAPI-Key': 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA',
+    'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
+  };
+
+  const response = await fetch(
+    'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera',
+    { headers: headers }
+  );
+
+  const result = await response.json();
+
+  return result;
+};
+
 const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
   const mileageFactor = 0.1; // Additional rate per mile driven
@@ -11,22 +27,6 @@ const calculateCarRent = (city_mpg: number, year: number) => {
   const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
 
   return rentalRatePerDay.toFixed(0);
-};
-
-const fetchCars = async () => {
-  const headers = {
-    'X-RapidAPI-Key': 'KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA',
-    'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
-  };
-
-  const response = await fetch(
-    'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla',
-    { headers: headers }
-  );
-
-  const result = await response.json();
-
-  return result;
 };
 
 export { fetchCars, calculateCarRent };
