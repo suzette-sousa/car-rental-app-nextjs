@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Button from "./Button";
 
-export default function Mea() {
+const Mea = () => {
   const handleScroll = () => {};
   return (
     <section className="mea">
@@ -28,4 +28,6 @@ export default function Mea() {
       </div>
     </section>
   );
-}
+};
+
+export default Mea;

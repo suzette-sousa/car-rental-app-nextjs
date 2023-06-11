@@ -1,19 +1,22 @@
 import { CustomButtonProps } from "@/types";
 import Image from "next/image";
 
-export default function Button({
+const Button = ({
   title,
   containerStyles,
   handleClick,
-}: CustomButtonProps) {
+  btnType,
+}: CustomButtonProps) => {
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={btnType || "button"}
       className={`btn ${containerStyles}`}
       onClick={handleClick}
     >
       <span className="flex-1">{title}</span>
     </button>
   );
-}
+};
+
+export default Button;

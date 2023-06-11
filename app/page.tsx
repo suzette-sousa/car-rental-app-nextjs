@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Mea } from "@/components";
 
-const testttt = "";
-
-export default function Home() {
+const Home = () => {
   return (
     <main className="overflow-hidden">
       <Mea />
     </main>
   );
-}
+};
+
+export default Home;
