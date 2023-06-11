@@ -34,4 +34,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+#added
 package-lock.json
+.env

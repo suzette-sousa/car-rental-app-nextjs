@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 
 import { CarProps } from '@/types';
+import { generateCarImageUrl } from '@/utils';
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -59,7 +60,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src="/mea.png"
+                        src={generateCarImageUrl(car, '29')}
                         alt="Car model"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
@@ -71,7 +72,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/mea.png"
+                          src={generateCarImageUrl(car, '33')}
                           alt="Car model"
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
@@ -82,7 +83,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
 
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/mea.png"
+                          src={generateCarImageUrl(car, '13')}
                           alt="Car model"
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
@@ -105,7 +106,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   </div>
 
                   <div className="overflow-y-auto flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl">
+                    <h2 className="font-semibold text-xl capitalize">
                       {car.make} {car.model}
                     </h2>
 
