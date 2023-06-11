@@ -23,8 +23,8 @@ const Mea = () => {
       <div className="mea__image-container">
         <div className="mea__image">
           <Image src="/mea.png" alt="mea" fill className="object-contain" />
-          <div className="mea__image-overlay" />
         </div>
+        <div className="mea__image-overlay" />
       </div>
     </section>
   );
