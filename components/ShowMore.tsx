@@ -20,7 +20,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     <div className="w-full flex-center gap-5 mt-10">
       {!isNext && (
         <Button
-          title="Show More"
+          title="Voir plus"
           btnType="button"
           containerStyles="bg-primary-blue rounded-full text-white"
           handleClick={handleNavigation}
