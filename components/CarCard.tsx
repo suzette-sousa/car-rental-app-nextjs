@@ -68,7 +68,7 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="gas"
-              className="w-auto"
+              className="h-[20px] w-auto"
             />
             <p className="text-[14px]">{city_mpg} l/100km</p>
           </div>
