@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CarCard, CustomFilter, Mea, SearchBar } from '@/components';
+import { CarCard, CustomFilter, Mea, SearchBar, ShowMore } from '@/components';
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from '@/constants';
 import { HomeProps } from '@/types';
@@ -41,6 +41,11 @@ const Home = async ({ searchParams }: HomeProps) => {
                 <CarCard key={key} car={car} />
               ))}
             </div>
+
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         ) : (
           <div className="home__error-container">
