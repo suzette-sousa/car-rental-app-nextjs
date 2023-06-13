@@ -12,6 +12,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     const newLimit = (pageNumber + 1) * 10;
 
     const newPathName = updateSearchParams('limit', `${newLimit}`);
+    localStorage.setItem('persistentScroll', window.scrollY.toString());
 
     router.push(newPathName);
   };

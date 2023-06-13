@@ -14,6 +14,8 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
   const handleUpdateParams = (e: { title: string; value: string }) => {
     const newPathName = updateSearchParams(title, e.value.toLowerCase());
 
+    localStorage.setItem('persistentScroll', window.scrollY.toString());
+
     router.push(newPathName);
   };
 
