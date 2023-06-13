@@ -37,3 +37,4 @@ next-env.d.ts
 #added
 package-lock.json
 .env
+.vscode/
