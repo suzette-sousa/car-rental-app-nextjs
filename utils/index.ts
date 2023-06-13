@@ -2,7 +2,7 @@ import { CarProps } from '@/types';
 
 const fetchCars = async () => {
   const headers = {
-    'X-RapidAPI-Key': process.env.CAR_API_KEY || '',
+    'X-RapidAPI-Key': process.env.NEXT_PUBLIC_CAR_API_KEY || '',
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
   };
 
@@ -36,7 +36,10 @@ const generateCarImageUrl = (car: CarProps, angle?: string) => {
 
   const { make, year, model } = car;
 
-  url.searchParams.append('customer', process.env.IMAGIN_API_KEY || '');
+  url.searchParams.append(
+    'customer',
+    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || ''
+  );
   url.searchParams.append('make', make);
   url.searchParams.append('modelFamily', model.split(' ')[0]);
   url.searchParams.append('zoomType', 'fullscreen');
