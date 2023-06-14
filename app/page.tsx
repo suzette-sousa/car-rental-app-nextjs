@@ -1,23 +1,9 @@
-'use client';
-
-import Image from 'next/image';
 import { CarCard, CustomFilter, Mea, SearchBar, ShowMore } from '@/components';
 import { fetchCars } from '@/utils';
 import { fuels, yearsOfProduction } from '@/constants';
 import { HomeProps } from '@/types';
-import { useEffect } from 'react';
 
 const Home = async ({ searchParams }: HomeProps) => {
-  useEffect(() => {
-    const persistentScroll = localStorage.getItem('persistentScroll');
-    if (persistentScroll === null) return;
-
-    window.scrollTo({ top: Number(persistentScroll) });
-
-    if (Number(persistentScroll) === window.scrollY)
-      localStorage.removeItem('persistentScroll');
-  }, [searchParams]);
-
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2022,

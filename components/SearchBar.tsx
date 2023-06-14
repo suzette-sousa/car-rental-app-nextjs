@@ -41,7 +41,6 @@ const SearchBar = () => {
     }
 
     const newPathname = `${pathname}?${params.toString()}`;
-    localStorage.setItem('persistentScroll', window.scrollY.toString());
 
     router.push(newPathname);
   };
