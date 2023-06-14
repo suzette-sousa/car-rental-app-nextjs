@@ -1,6 +1,6 @@
 # Projet Next JS
 
-## Système de recherche avec filtres et pagination
+### Système de recherche avec filtres et pagination
 
 ### Thème : Location de voitures
 
