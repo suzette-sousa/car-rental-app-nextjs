@@ -2,7 +2,7 @@
 
 ### Système de recherche avec filtres et pagination
 
-### Thème : Location de voitures
+Thème : Location de voitures
 
 ## Tech Stack :
 
